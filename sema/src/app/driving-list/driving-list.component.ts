@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class DrivingListComponent implements OnInit {
   obs_drive: Observable<Drive[]>;
   driveList : Drive[];
+  selectedCar : Drive;
 
   constructor(public http: HttpClient) { }
 
@@ -25,8 +26,8 @@ export class DrivingListComponent implements OnInit {
   onNoleggia(auto : Drive) :boolean
   {
     console.log(auto);
+    this.selectedCar=auto;
     return false;
   }
 }
 
-//Pure il punto 4
