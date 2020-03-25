@@ -22,5 +22,9 @@ export class DrivingListComponent implements OnInit {
     this.driveList = auto;
   }
 
-
+  onNoleggia(auto : Drive) :boolean
+  {
+    console.log(auto);
+    return false;
+  }
 }
